@@ -17,5 +17,4 @@ Güncelle
   <button style="position:absolute; top:5px; right:5px; background-color:#fff; border:none; color:#000; padding:5px 10px; border-radius:3px;" onclick="navigator.clipboard.writeText('defter-guncelle')"></button>
   <pre><code>defter-guncelle</code></pre>
 
-<br>
 ![kapak](img.png)
