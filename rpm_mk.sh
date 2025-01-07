@@ -24,7 +24,7 @@ echo "Spec dosyası oluşturuluyor: $SPEC_FILE"
 
 cat > "$SPEC_FILE" << EOF
 Name:           $PROGRAM_NAME
-Version:        1.0
+Version:        2.0
 Release:        1%{?dist}
 Summary:        $PROGRAM_NAME programı
 
