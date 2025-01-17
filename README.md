@@ -1,7 +1,8 @@
 # Defter
 
 Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sadece Linux (KDE Plasma uyumlu) işletim sistemi için hazırlanmıştır. yazdığınız notlar Benim geliştirdiğim şifreli bir veri tabaınında tutulur. Bu veri tabanı kullanıcı klasöründe .defter içinde bulunur.
-<a href="https://defter.netlify.app/">Web sitesi</a>
+<br>
+<h2><a href="https://defter.netlify.app/">Web sitesi</a><h2>
 
 ## Fedora için RPM paketi | 64 bit
 Kur
