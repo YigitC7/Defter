@@ -7,9 +7,9 @@ kullanici_dizini = os.path.expanduser("~")
 kullanici_adi = os.getlogin()
 
 hakkinda_text = """ |
- |Sürüm\t\t: 2.0
+ |Sürüm\t\t: 3.0
  |Yazan\t\t: Yiğit çıtak
- |dil\t\t: Python
+ |Dil\t\t: Python
  |veri tabanı\t: .yigit
  |kütüphane\t: customtkinter
  |=======================================
@@ -21,6 +21,11 @@ hakkinda_text = """ |
  |veri tabaınında tutulur. Bu veri tabanı
  |kullanıcı klasöründe .defter içinde bulunur.
  |"""
+kisayol_text = """
+ |CTRL + C : Kopyala
+ |CTRL + V : Yapıştır
+ |CTRL + X : Kes
+ |CTRL + S : Kaydet"""
 
 def Sifrele(sifrelenecek_girdi):
 	sifreleniyor1 = sifrelenecek_girdi.replace("q","y0y")
@@ -213,6 +218,24 @@ def defter_program():
 
 		hakkinda.mainloop()
 
+	def kisayol_fonk():
+		hakkinda = ctk.CTk()
+		hakkinda.title("Defter | Kısayollar")
+		hakkinda.minsize(390,340)
+		hakkinda.configure(fg_color=color_window)
+
+		info = ctk.CTkLabel(hakkinda,
+			text=kisayol_text,
+			font=("italic",30),
+			text_color="white",
+			justify="left",
+			width=350,
+			height=300,
+			fg_color=color_genel)
+		info.pack(pady=20)
+
+		hakkinda.mainloop()
+
 	def sayfa_oku():
 		file = open(f"{kullanici_dizini}/.defter/end.yigit","r")
 		file_islenmis = file.read()
@@ -267,7 +290,8 @@ def defter_program():
 	info_button_konum = konum(x=1,y=1)
 	yazi_paneli_konum = konum(x=1,y=150)
 	tema_yaziboyut_secenekleri_konum = konum(x=1,y=50)
-	kayit_button_konum = konum(x=80,y=1)
+	kayit_button_konum = konum(x=175,y=10)
+	kisa_button_konum = konum(x=80,y=1)
 
 	title = ctk.CTkLabel(window,
 		text="Defter",
@@ -291,6 +315,16 @@ def defter_program():
 		x=info_button_konum.x,
 		y=info_button_konum.y)
 
+	kisayol_button = ctk.CTkButton(window,
+		text="Kısayollar",
+		fg_color=color_genel,
+		text_color="white",
+		width=40,
+		command=kisayol_fonk)
+	kisayol_button.place(
+		x=kisa_button_konum.x,
+		y=kisa_button_konum.y)
+
 	yazi_paneli = ctk.CTkTextbox(window,
 		height=570,
 		width=860,
@@ -304,28 +338,15 @@ def defter_program():
 		y=yazi_paneli_konum.y,)
 
 	def yaziboyut_fonk(cuhice):
-		if cuhice == "10":
-			yazi_paneli.configure(font=("italic",10))
-			text_size_yaz("10")
+		yazi_paneli.configure(font=("italic",int(cuhice)))
+		text_size_yaz(cuhice)
 
-		elif cuhice == "20":
-			yazi_paneli.configure(font=("italic",20))
-			text_size_yaz("20")
 
-		elif cuhice == "30":
-			yazi_paneli.configure(font=("italic",30))
-			text_size_yaz("30")
+	tema_values_l = [str(tema_values_i) for tema_values_i in range(10,41,2)]
 
-		elif cuhice == "40":
-			yazi_paneli.configure(font=("italic",40))
-			text_size_yaz("40")
-
-		elif cuhice == "50":
-			yazi_paneli.configure(font=("italic",50))
-			text_size_yaz("50")
-
+	tema_values_l = tema_values_l
 	tema_yaziboyut_secenekleri = ctk.CTkComboBox(window,
-		values=["10","20","30","40","50"],
+		values=tema_values_l,
 		command=yaziboyut_fonk)
 	tema_yaziboyut_secenekleri.set(f"Yazı boyutu: {text_size_oku()}")
 	tema_yaziboyut_secenekleri.place(
@@ -348,6 +369,7 @@ def defter_program():
 		fg_color=color_genel,
 		text_color="white",
 		width=40,
+		font=("italic",21),
 		command=kayit_fonk)
 	kayit_button.place(
 		x=kayit_button_konum.x,
