@@ -7,7 +7,7 @@ Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sa
   
 ![kapak](img.png)
 <br>
-### Yeni bir kütüphane olan Customtkinter'i kullanır
+### Yeni bir kütüphane olan Customtkinter kullanır
   
 ```python
   import customtkinter as ctk
@@ -24,7 +24,7 @@ Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sa
 ```
 <br>
 
-### Bütün renk kodları düzenli şekilde sınıflandırılmıştır
+### Bütün renk kodları düzenli şekilde yazılmıştır
 
 ```python
 	class colors:
@@ -87,7 +87,7 @@ Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sa
 
 <br>
 
-### Pencere nesneleri x ve y konumları düzenli olarak sınıflandırıldı
+### Pencere nesneleri x ve y konumları düzenli olarak sınıflandırılmıştır
 
 ```python
 	class konum:
