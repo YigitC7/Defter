@@ -108,11 +108,11 @@ Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sa
 ### Notların tutuduğu dizin içeriği
 
 ```
-├──.defter \
+├──.defter\
        ├── end.yigit
        ├── tema_index.yigit
        ├── texsize.yigit
-       └── Notlar \
+       └── Notlar\
                ├──sayfa1.yigit
                ├──sayfa2.yigit
                ├──sayfa3.yigit
