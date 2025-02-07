@@ -105,7 +105,7 @@ Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sa
 ```
 <br>
 
-### Notların tutuduğu dizin içeriği
+### Notların tutulduğu dizin içeriği
 
 ```
 ├──.defter\
