@@ -103,4 +103,27 @@ Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sa
 	tema_button_konum = konum(x=160,y=1)
 	sayfa_numarasi_konum = konum(x=3,y=110)
 ```
+<br>
 
+### Notların tutuduğu dizin içeriği
+
+```
+├──.defter \
+       ├── end.yigit
+       ├── tema_index.yigit
+       ├── texsize.yigit
+       └── Notlar \
+               ├──sayfa1.yigit
+               ├──sayfa2.yigit
+               ├──sayfa3.yigit
+               ├──sayfa4.yigit
+               ├──sayfa5.yigit
+               ├──sayfa6.yigit
+               ├──sayfa7.yigit
+               ├──sayfa8.yigit
+               ├──sayfa9.yigit
+               ├──sayfa10.yigit
+               ├──sayfa11.yigit
+               └──sayfa12.yigit
+
+```
