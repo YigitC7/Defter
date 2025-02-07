@@ -5,12 +5,12 @@ Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sa
 <p>Kurulum ve daha fazla ayrıntı için <a href="https://defter.netlify.app/">Web sitesini</a> ziyaret edin.<p>
 <br>
 ### Yeni bir kütüphane olan Customtkinter'i kullanır
-'''python
+```python
 window = ctk.CTk()
 window.title(baslik_turkce_optimasyon())
-window.minsize(1200,750)
-window.maxsize(1200,750)
-window.geometry("1200x750x500x100")
+window.minsize(1200, 750)
+window.maxsize(1200, 750)
+window.geometry("1200x750+500+100")  # 'x' yerine '+' kullanılmalı
 window.configure(fg_color=main_tema.window)
 window.resizable(False, False)
 
