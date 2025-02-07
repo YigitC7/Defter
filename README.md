@@ -22,6 +22,7 @@ Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sa
 
   window.mainloop()
 ```
+<br>
 ### Bütün renk kodları düzenli şekilde sınıflandırılmıştır
 
 ```python
@@ -81,5 +82,24 @@ Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sa
 		sayfa_text = "white",
 		button_text = "black",
 		)
+```
+
+<br>
+### Pencere nesneleri x ve y konumları düzenli olarak sınıflandırıldı
+
+```python
+	class konum:
+		def __init__(self,x=1,y=1):
+			self.x = x
+			self.y = y
+
+	not_paneli_konum = konum(x=600,y=100)
+	info_button_konum = konum()
+	yazi_paneli_konum = konum(x=1,y=150)
+	tema_yaziboyut_secenekleri_konum = konum(x=1,y=50)
+	kayit_button_konum = konum(x=235,y=10)
+	kisayol_button_konum = konum(x=80,y=1)
+	tema_button_konum = konum(x=160,y=1)
+	sayfa_numarasi_konum = konum(x=3,y=110)
 ```
 
