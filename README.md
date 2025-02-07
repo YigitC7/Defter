@@ -5,6 +5,7 @@ Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sa
 <p>Kurulum ve daha fazla ayrıntı için <a href="https://defter.netlify.app/">Web sitesini</a> ziyaret edin.<p>
 <br>
 ### Yeni bir kütüphane olan Customtkinter'i kullanır
+  
 ```python
 window = ctk.CTk()
 window.title(baslik_turkce_optimasyon())
