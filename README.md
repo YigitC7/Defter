@@ -16,7 +16,7 @@ Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sa
   window.title(baslik_turkce_optimasyon())
   window.minsize(1200, 750)
   window.maxsize(1200, 750)
-  window.geometry("1200x750+500+100")  # 'x' yerine '+' kullanılmalı
+  window.geometry("1200x750+500+100")
   window.configure(fg_color=main_tema.window)
   window.resizable(False, False)
 
