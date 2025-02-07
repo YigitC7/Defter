@@ -7,6 +7,8 @@ Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sa
 ### Yeni bir kütüphane olan Customtkinter'i kullanır
   
 ```python
+import customtkinter as ctk
+
 window = ctk.CTk()
 window.title(baslik_turkce_optimasyon())
 window.minsize(1200, 750)
@@ -15,4 +17,7 @@ window.geometry("1200x750+500+100")  # 'x' yerine '+' kullanılmalı
 window.configure(fg_color=main_tema.window)
 window.resizable(False, False)
 
+window.mainloop()
+
+```
 ![kapak](img.png)
