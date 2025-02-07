@@ -1,6 +1,7 @@
 # Defter
 
-Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sadece Linux işletim sistemi için hazırlanmıştır, ama yine de Windows için bir exe versiyonu bulunmaktadır <a hraf="https://github.com/YigitC7/Defter/releases/download/4.0/Defter.exe">Windows versiyonu</a>. yazdığınız notlar Benim geliştirdiğim şifreli bir veri tabaınında tutulur. Bu veri tabanı kullanıcı klasöründe .defter içinde bulunur.
+Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sadece Linux işletim sistemi için hazırlanmıştır, ama yine de Windows için bir exe versiyonu bulunmaktadır 
+<a hraf="https://github.com/YigitC7/Defter/releases/download/4.0/Defter.exe">Windows versiyonu.</a> yazdığınız notlar Benim geliştirdiğim şifreli bir veri tabaınında tutulur. Bu veri tabanı kullanıcı klasöründe .defter içinde bulunur.
 <br>
 <p>Kurulum ve daha fazla ayrıntı için <a href="https://defter.netlify.app/">Web sitesini</a> ziyaret edin.<p>
   
