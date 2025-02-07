@@ -4,6 +4,8 @@ Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sa
 <br>
 <p>Kurulum ve daha fazla ayrıntı için <a href="https://defter.netlify.app/">Web sitesini</a> ziyaret edin.<p>
 <br>
+![kapak](img.png)
+<br>
 ### Yeni bir kütüphane olan Customtkinter'i kullanır
   
 ```python
@@ -20,4 +22,4 @@ window.resizable(False, False)
 window.mainloop()
 
 ```
-![kapak](img.png)
+
