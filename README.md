@@ -128,8 +128,10 @@ Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sa
 
 ```
 ```
-end.yigit ──> En son kullanılan sayfa numarası yazar
-tema_index.yigit ──> En son kullanılan tema numarası yazar
-texsize.yigit ──> En son ayarlanan yazı boyutu yazar
-sayfa1.yigit ──> Sayfa içeriği şifreli bir şekilde yazar
+
+	end.yigit ──> En son kullanılan sayfa numarası yazar
+	tema_index.yigit ──> En son kullanılan tema numarası yazar
+	texsize.yigit ──> En son ayarlanan yazı boyutu yazar
+	sayfa1.yigit ──> Sayfa içeriği şifreli bir şekilde yazar
+
 ```
