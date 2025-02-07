@@ -23,6 +23,7 @@ Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sa
   window.mainloop()
 ```
 <br>
+
 ### Bütün renk kodları düzenli şekilde sınıflandırılmıştır
 
 ```python
@@ -85,6 +86,7 @@ Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sa
 ```
 
 <br>
+
 ### Pencere nesneleri x ve y konumları düzenli olarak sınıflandırıldı
 
 ```python
