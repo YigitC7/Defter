@@ -109,11 +109,11 @@ Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sa
 
 ```
 ├──.defter\
-       ├── end.yigit ──> En son kullanılan sayfa numarası yazar
-       ├── tema_index.yigit ──> En son kullanılan tema numarası yazar
-       ├── texsize.yigit ──> En son ayarlanan yazı boyutu yazar
+       ├── end.yigit 
+       ├── tema_index.yigit
+       ├── texsize.yigit
        └── Notlar\
-               ├──sayfa1.yigit ──> Sayfa içeriği şifreli şekilde yazar
+               ├──sayfa1.yigit
                ├──sayfa2.yigit
                ├──sayfa3.yigit
                ├──sayfa4.yigit
@@ -126,4 +126,10 @@ Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sa
                ├──sayfa11.yigit
                └──sayfa12.yigit
 
+```
+```
+end.yigit ──> En son kullanılan sayfa numarası yazar
+tema_index.yigit ──> En son kullanılan tema numarası yazar
+texsize.yigit ──> En son ayarlanan yazı boyutu yazar
+sayfa1.yigit ──> Sayfa içeriği şifreli bir şekilde yazar
 ```
