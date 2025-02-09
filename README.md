@@ -40,6 +40,8 @@ bash ./install.sh
 
 >Detaylı kurulum ve daha fazla ayrıntı için <a href="https://defter.netlify.app/">Web sitesini</a> ziyaret edin.
 
+<br>
+
 ### Yeni bir kütüphane olan Customtkinter kullanır
   
 ```python
