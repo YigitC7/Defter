@@ -1,5 +1,5 @@
 if [[ "${UID}" != 0 ]] ; then
-	echo -e "Lütfen bu scripti yönetici olarak çalıştırın: \n\tsudo bash ./notifcat.sh --install"
+	echo -e "Lütfen bu scripti yönetici olarak çalıştırın: \n\tsudo bash ./remove.sh"
 	exit 1
 fi
 rm -rf /usr/share/defter
