@@ -35,7 +35,12 @@ git clone https://github.com/YigitC7/Defter
 cd Defter
 ```
 ```bash
-bash ./install.sh
+sudo sh install.sh
+```
+<p>Kaldırmak için</p>
+
+```bash
+sudo sh remove.sh
 ```
 
 >Detaylı kurulum ve daha fazla ayrıntı için <a href="https://defter.netlify.app/">Web sitesini</a> ziyaret edin.
