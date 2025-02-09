@@ -1,12 +1,33 @@
 # Defter
 
+<div align="center">
+<img src="install/defter.png" alt="logo" width="128"/>
+
+![Pyton GUI APP](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=for-the-badge)
+![QT5 APP](https://img.shields.io/badge/QT-41CD52?logo=qt&logoColor=white&style=for-the-badge)
+![Linux](https://img.shields.io/badge/Linux-1e1e1e?logo=linux&logoColor=white&style=for-the-badge)
+[![Codacity](https://img.shields.io/codacy/grade/bb3500c728344ef898cb6c66bc356f00?logo=codacy&logoColor=white&style=for-the-badge)](https://app.codacy.com/gh/YigitC7/Defter)
+</div>
+
+	
+  ![resim](https://github.com/user-attachments/assets/16712478-680b-4d17-9a82-de0f796826fb)
+
 Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sadece Linux işletim sistemi için hazırlanmıştır, ama yine de Windows için derlenmiş bir exe versiyonu bulunmaktadır 
 <a href="https://github.com/YigitC7/Defter/releases/download/4.0/Defter.exe" title="indir">Windows versiyonu.</a> Yazdığınız notlar Benim geliştirdiğim şifreli bir veri tabaınında tutulur. Bu veri tabanı kullanıcı klasöründe .defter içinde bulunur.
-<br>
-<p>Kurulum ve daha fazla ayrıntı için <a href="https://defter.netlify.app/">Web sitesini</a> ziyaret edin.<p>
-  
-![kapak](img.png)
-<br>
+
+### Kurulum
+```bash	
+git clone https://github.com/YigitC7/Defter
+```
+```bash
+cd Defter
+```
+```bash
+bash ./install.sh
+```
+
+>Detaylı kurulum ve daha fazla ayrıntı için <a href="https://defter.netlify.app/">Web sitesini</a> ziyaret edin.
+
 ### Yeni bir kütüphane olan Customtkinter kullanır
   
 ```python
