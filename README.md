@@ -22,9 +22,9 @@ curl -sSL https://yigit-packages.netlify.app/Defter/install.sh | bash
 ```
 ### Pardus / Ubuntu ve diğer Debian tabanlı dağıtımlar için
 ```bash	
-curl -sSL https://yigit-packages.netlify.app/Defter/install.sh | bash
-```
 curl -sSL https://yigit-packages.netlify.app/Defter/deb/install.sh | bash
+```
+
 ### Manuel kurulum
 ```bash	
 git clone https://github.com/YigitC7/Defter
