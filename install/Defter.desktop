@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Defter
-Exec=/usr/share/defter/Defter.py
+Exec=/usr/share/defter/Defter
 Comment=Sayfalar halinde not tutmanın en güvenli yolu!
 Terminal=false
 Icon=/usr/share/pixmaps/defter.png
