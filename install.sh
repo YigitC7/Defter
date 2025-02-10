@@ -2,7 +2,7 @@ if [[ "${UID}" != 0 ]] ; then
 	echo -e "Lütfen bu scripti yönetici olarak çalıştırın: \n\tsudo bash ./install.sh"
 	exit 1
 fi
-if ! command -v python3 &&
+if ! command -v python3
 then
     	clear
     	echo -e "\033[1;31m
