@@ -24,11 +24,13 @@ exit 1
 fi
 python3 -m venv lib # Pip için venv denilen bir araç kullanıyorum çünkü çoğu dağıtımlarda pip çalışmıyor.
 source lib/bin/activate
-pip install tkinter customtkinter pyinstaller
+pip install --upgrade pip
+pip install tkinter
+pip install customtkinter pyinstaller
 pyinstaller --noconsole --onefile install/Defter.py # Programı derliyorum çünkü bunu yorumlamak için sürekli venv ektif etmeye gerek kalmasın.
-mkdir /usr/share/defter
-cp -r dist/Defter /usr/share/defter
-cp -r install/defter.png /usr/share/pixmaps/
-cp -r install/Defter.desktop /usr/share/applications/
-clear
+sudo mkdir /usr/local/bin/defter
+sudo cp -r dist/Defter /usr/local/bin/defter/Defter
+sudo cp -r install/defter.png /usr/share/pixmaps/
+sudo cp -r install/Defter.desktop /usr/share/applications/
+
 echo -e "\e[1;34mDefter Sisteminize Yüklendi\033[0m"
