@@ -27,7 +27,7 @@ source lib/bin/activate
 pip install tkinter customtkinter pyinstaller
 pyinstaller --noconsole --onefile install/Defter.py # Programı derliyorum çünkü bunu yorumlamak için sürekli venv ektif etmeye gerek kalmasın.
 mkdir /usr/share/defter
-cp -r install/dist/Defter /usr/share/defter
+cp -r dist/Defter /usr/share/defter
 cp -r install/defter.png /usr/share/pixmaps/
 cp -r install/Defter.desktop /usr/share/applications/
 clear
