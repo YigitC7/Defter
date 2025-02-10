@@ -18,16 +18,6 @@ Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sa
 <a href="https://github.com/YigitC7/Defter/releases/download/4.0/Defter.exe" title="indir">Windows versiyonu.</a> Yazdığınız notlar Benim geliştirdiğim şifreli bir veri tabaınında tutulur. Bu veri tabanı kullanıcı klasöründe .defter içinde bulunur.
 
 ## Kurulum
-### Fedora için
-```bash	
-curl -sSL https://yigit-packages.netlify.app/Defter/install.sh | bash
-```
-### Pardus / Ubuntu ve diğer Debian tabanlı dağıtımlar için
-```bash	
-curl -sSL https://yigit-packages.netlify.app/Defter/deb/install.sh | bash
-```
-
-### Manuel kurulum
 ```bash	
 git clone https://github.com/YigitC7/Defter
 ```
@@ -42,7 +32,10 @@ sudo sh install.sh
 ```bash
 sudo sh remove.sh
 ```
-
+## Tam komut
+```bash	
+git clone https://github.com/YigitC7/Defter && cd Defter && sudo sh install.sh
+```
 >Detaylı kurulum ve daha fazla ayrıntı için <a href="https://defter.netlify.app/">Web sitesini</a> ziyaret edin.
 
 <br>
