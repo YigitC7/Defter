@@ -6,24 +6,24 @@ if ! command -v python3
 then
     	clear
     	echo -e "\033[1;31m
-Pip sisteminizde bulunamadı!\033[1;33m
+Python3 sisteminizde bulunamadı!\033[1;33m
 Gerekli araçların kurulumu için python3-pip paketi gereklidir :)
 
 \033[1;31mPip3 Kurulumu:
 \033[1;36m
 Debian/Ubuntu
-→ sudo apt install python3-pip python3-venv
+→ sudo apt install python3 python3-pip python3-venv
 \033[1;32m
 Arch Linux
 → sudo pacman -S python3 python3-pip
 \033[1;36m
 Fedora
-→ sudo dnf install python3-pip python3-venv\033[0m
+→ sudo dnf install python3 python3-pip\033[0m
 "
 exit 1
 fi
-python3 -m venv lib # Pip için venv denilen bir araç kullanıyorum çünkü çoğu dağıtımlarda pip çalışmıyor.
-source lib/bin/activate
+python3 -m venv myev # Pip için venv denilen bir araç kullanıyorum çünkü çoğu dağıtımlarda pip çalışmıyor.
+source myev/bin/activate
 pip install --upgrade pip
 pip install tkinter
 pip install customtkinter pyinstaller
