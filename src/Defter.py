@@ -264,7 +264,8 @@ def defter_program():
 				not_paneli.place_forget()
 				yazi_paneli.configure(width=1198,height=650)
 				yazi_paneli.place(y=yazi_paneli_konum.y-50)
-				sayfa_numarasi.place(x=900,y=5)
+				sayfa_numarasi.place_forget()
+				window.title(f"{baslik_turkce_optimasyon()} | Sayfa {sayfa_oku()}")
 				tema_yaziboyut_secenekleri.place(x=tema_yaziboyut_secenekleri_konum.x,y=tema_yaziboyut_secenekleri_konum.y)
 				kayit_button.place(x=kayit_button_konum.x,y=kayit_button_konum.y)
 				kisayol_button.place(x=kisayol_button_konum.x,y=kisayol_button_konum.y)
@@ -372,6 +373,7 @@ def defter_program():
 			yazi_paneli.place(y=yazi_paneli_konum.y)
 			yazi_paneli.configure(height=570,width=860)
 			sayfa_numarasi.place(x=sayfa_numarasi_konum.x,y=sayfa_numarasi_konum.y)
+			window.title(baslik_turkce_optimasyon())
 			global bildirim_2_konum
 			bildirim_2_konum =False
 			window.bind("<Control-f>",full_panel_fonk)
@@ -379,7 +381,8 @@ def defter_program():
 		not_paneli.place_forget()
 		yazi_paneli.configure(width=1198,height=650)
 		yazi_paneli.place(y=yazi_paneli_konum.y-50)
-		sayfa_numarasi.place(x=900,y=5)
+		sayfa_numarasi.place_forget()
+		window.title(f"{baslik_turkce_optimasyon()} | Sayfa {sayfa_oku()}")
 		global bildirim_2_konum
 		bildirim_2_konum = True
 		window.bind("<Control-f>",geri)
