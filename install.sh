@@ -33,4 +33,4 @@ sudo cp -r dist/Defter /usr/local/bin/defter/Defter
 sudo cp -r install/defter.png /usr/share/pixmaps/
 sudo cp -r install/Defter.desktop /usr/share/applications/
 clear
-echo -e "\e[1;34mDefter Sisteminize Yüklendi\033[0m"
+echo -e "\e[1;34mDefter 5.0 Sisteminize Yüklendi\033[0m"
