@@ -11,8 +11,8 @@
 [![Codacity](https://img.shields.io/codacy/grade/bb3500c728344ef898cb6c66bc356f00?logo=codacy&logoColor=white&style=for-the-badge)](https://app.codacy.com/gh/YigitC7/Defter)
 </div>
 
-	
-  ![resim](https://github.com/user-attachments/assets/16712478-680b-4d17-9a82-de0f796826fb)
+
+![resim](https://github.com/user-attachments/assets/16712478-680b-4d17-9a82-de0f796826fb)
 
 Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sadece Linux işletim sistemi için hazırlanmıştır, ama yine de Windows için derlenmiş bir exe versiyonu bulunmaktadır 
 <a href="https://github.com/YigitC7/Defter/releases/download/4.0/Defter.exe" title="indir">Windows versiyonu.</a> Yazdığınız notlar Benim geliştirdiğim şifreli bir veri tabaınında tutulur. Bu veri tabanı kullanıcı klasöründe .defter içinde bulunur.
