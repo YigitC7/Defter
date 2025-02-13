@@ -1,16 +1,15 @@
 import customtkinter as ctk
-from os import getenv, mkdir
-import os
+from os import getenv, mkdir, getlogin, path
 
-kullanici_dizini = os.path.expanduser("~")
-kullanici_adi = os.getlogin()
+kullanici_dizini = path.expanduser("~")
+kullanici_adi = getlogin()
 
-hakkinda_text = """ |Sürüm\t\t\t: 4.0
+hakkinda_text = """ |Sürüm\t\t\t: 5.0
  |Karakter türü\t\t: UTF-8
  |Yazan\t\t\t: Yiğit Çıtak
  |Dil\t\t\t: Python
  |veri tabanı\t\t: .yigit
- |GUI kütüphanesi\t: Customtkinter
+ |GUI kütüphanesi\t\t: Customtkinter
  |=======================================
  |Bu bir not defteri programıdır.
  |Sayfalar halinde not tutmanızı sağlar
@@ -21,7 +20,7 @@ hakkinda_text = """ |Sürüm\t\t\t: 4.0
  |kullanıcı klasöründe .defter içinde bulunur.
  |"""
 
-kisayol_text = """
+kisayol_text = """ |CTRL + F : Yazı Alanını Genişlet
  |CTRL + C : Kopyala
  |CTRL + V : Yapıştır
  |CTRL + X : Kes
@@ -32,137 +31,73 @@ baslangic_ve_bittis_cizgisi = "===========[Defter"
 
 def Sifrele(sifrelenecek_girdi):
 	sifreleniyor1 = sifrelenecek_girdi.replace("q","y0y")
-
 	sifreleniyor2 = sifreleniyor1.replace("w","y00y")
-
 	sifreleniyor3 = sifreleniyor2.replace("e","y000y")
-
 	sifreleniyor4 = sifreleniyor3.replace("r","y0000y")
-
 	sifreleniyor5 = sifreleniyor4.replace("t","y00000y")
-
 	sifreleniyor6 = sifreleniyor5.replace("y","y000000y")
-
 	sifreleniyor7 = sifreleniyor6.replace("u","y0000000y")
-
 	sifreleniyor8 = sifreleniyor7.replace("ı","y00000000y")
-
 	sifreleniyor9 = sifreleniyor8.replace("o","y000000000y")
-
 	sifreleniyor10 = sifreleniyor9.replace("p","y0000000000y")
-
 	sifreleniyor11 = sifreleniyor10.replace("ğ","y00000000000y")
-
 	sifreleniyor12 = sifreleniyor11.replace("ü","y000000000000y")
-
 	sifreleniyor13 = sifreleniyor12.replace("a","y0000000000000y")
-
 	sifreleniyor14 = sifreleniyor13.replace("s","y00000000000000y")
-
 	sifreleniyor15 = sifreleniyor14.replace("d","y000000000000000y")
-
 	sifreleniyor16 = sifreleniyor15.replace("f","y0000000000000000y")
-
 	sifreleniyor17 = sifreleniyor16.replace("g","y00000000000000000y")
-
 	sifreleniyor18 = sifreleniyor17.replace("h","y000000000000000000y")
-
 	sifreleniyor19 = sifreleniyor18.replace("j","y0000000000000000000y")
-
 	sifreleniyor20 = sifreleniyor19.replace("k","y00000000000000000000y")
-
 	sifreleniyor21 = sifreleniyor20.replace("l","y000000000000000000000y")
-
 	sifreleniyor22 = sifreleniyor21.replace("ş","y0000000000000000000000y")
-
 	sifreleniyor23 = sifreleniyor22.replace("i","y00000000000000000000000y")
-
 	sifreleniyor24 = sifreleniyor23.replace("z","y000000000000000000000000y")
-
 	sifreleniyor25 = sifreleniyor24.replace("x","y0000000000000000000000000y")
-
 	sifreleniyor26 = sifreleniyor25.replace("c","y00000000000000000000000000y")
-
 	sifreleniyor27 = sifreleniyor26.replace("v","y000000000000000000000000000y")
-
 	sifreleniyor28 = sifreleniyor27.replace("b","y0000000000000000000000000000y")
-
 	sifreleniyor29 = sifreleniyor28.replace("n","y00000000000000000000000000000y")
-
 	sifreleniyor30 = sifreleniyor29.replace("m","y000000000000000000000000000000y")
-
 	sifreleniyor31 = sifreleniyor30.replace("ö","y0000000000000000000000000000000y")
-
 	sifrelendi = sifreleniyor31.replace("ç","y00000000000000000000000000000000y")
 	return sifrelendi
 
-
 def coz(cozulecek_girdi):
 	cozuluyor1 = cozulecek_girdi.replace("y000000y0y000000y","q")
-
 	cozuluyor2 = cozuluyor1.replace("y000000y00y000000y","w")
-
 	cozuluyor3 = cozuluyor2.replace("y000000y000y000000y","e")
-
 	cozuluyor4 = cozuluyor3.replace("y000000y0000y000000y","r")
-
 	cozuluyor5 = cozuluyor4.replace("y000000y00000y000000y","t")
-
 	cozuluyor6 = cozuluyor5.replace("y000000y","y")
-
 	cozuluyor7 = cozuluyor6.replace("y0000000y","u")
-
 	cozuluyor8 = cozuluyor7.replace("y00000000y","ı")
-
 	cozuluyor9 = cozuluyor8.replace("y000000000y","o")
-
 	cozuluyor10 = cozuluyor9.replace("y0000000000y","p")
-
 	cozuluyor11 = cozuluyor10.replace("y00000000000y","ğ")
-
 	cozuluyor12 = cozuluyor11.replace("y000000000000y","ü")
-
 	cozuluyor13 = cozuluyor12.replace("y0000000000000y","a")
-
 	cozuluyor14 = cozuluyor13.replace("y00000000000000y","s")
-
 	cozuluyor15 = cozuluyor14.replace("y000000000000000y","d")
-
 	cozuluyor16 = cozuluyor15.replace("y0000000000000000y","f")
-
 	cozuluyor17 = cozuluyor16.replace("y00000000000000000y","g")
-
 	cozuluyor18 = cozuluyor17.replace("y000000000000000000y","h")
-
 	cozuluyor19 = cozuluyor18.replace("y0000000000000000000y","j")
-
 	cozuluyor20 = cozuluyor19.replace("y00000000000000000000y","k")
-
 	cozuluyor21 = cozuluyor20.replace("y000000000000000000000y","l")
-
 	cozuluyor22 = cozuluyor21.replace("y0000000000000000000000y","ş")
-
 	cozuluyor23 = cozuluyor22.replace("y00000000000000000000000y","i")
-
 	cozuluyor24 = cozuluyor23.replace("y000000000000000000000000y","z")
-
 	cozuluyor25 = cozuluyor24.replace("y0000000000000000000000000y","x")
-
 	cozuluyor26 = cozuluyor25.replace("y00000000000000000000000000y","c")
-
 	cozuluyor27 = cozuluyor26.replace("y000000000000000000000000000y","v")
-
 	cozuluyor28 = cozuluyor27.replace("y0000000000000000000000000000y","b")
-
 	cozuluyor29 = cozuluyor28.replace("y00000000000000000000000000000y","n")
-
 	cozuluyor30 = cozuluyor29.replace("y000000000000000000000000000000y","m")
-
 	cozuluyor31 = cozuluyor30.replace("y0000000000000000000000000000000y","ö")
-
 	cozuldu = cozuluyor31.replace("y00000000000000000000000000000000y","ç")
 	return cozuldu
-
 
 def text_size_yaz(size=""):
 	file = open(f"{kullanici_dizini}/.defter/textsize.yigit","w")
@@ -178,10 +113,16 @@ def text_size_oku():
 def defter_program():
 	global Yeniden_baslatma_islemi
 	Yeniden_baslatma_islemi = False
+	global bildirim_2_konum
+	bildirim_2_konum = False
 
 	def kayit_fonk(event=None):
 		pad_icerik = yazi_paneli.get("1.0","end").strip()
-		kayit_bildirim.place(x=103,y=110)
+		global bildirim_2_konum
+		if bildirim_2_konum == True:
+			kayit_bildirim.place(x=1020,y=5)
+		else:
+			kayit_bildirim.place(x=103,y=110)
 		kayit_bildirim.after(3000, lambda: kayit_bildirim.place_forget())
 		try:
 			pad_icerik_y0 = Sifrele(pad_icerik)
@@ -189,11 +130,10 @@ def defter_program():
 			file.write(pad_icerik_y0)
 			file.close()
 		except:
-			if sayfa_oku() ==  "1":
-				pad_icerik_y0 = Sifrele(pad_icerik)
-				file = open(f"{kullanici_dizini}/.defter/notlar/sayfa1.yigit","w")
-				file.write(pad_icerik_y0)
-				file.close()
+			pad_icerik_y0 = Sifrele(pad_icerik)
+			file = open(f"{kullanici_dizini}/.defter/notlar/sayfa1.yigit","w")
+			file.write(pad_icerik_y0)
+			file.close()
 
 	class colors:
 		def __init__(self,
@@ -310,15 +250,28 @@ def defter_program():
 			window.title(baslik_turkce_optimasyon())
 			tema_button.configure(text="Temalar",command=tema_fonk,width=40)
 
-			not_paneli.place(relx=1.0, rely=0.5, anchor='e')
-			info_button.place(x=info_button_konum.x,y=info_button_konum.y)
-			yazi_paneli.place(x=yazi_paneli_konum.x,y=yazi_paneli_konum.y)
-			tema_yaziboyut_secenekleri.place(x=tema_yaziboyut_secenekleri_konum.x,y=tema_yaziboyut_secenekleri_konum.y)
-			kayit_button.place(x=kayit_button_konum.x,y=kayit_button_konum.y)
-			kisayol_button.place(x=kisayol_button_konum.x,y=kisayol_button_konum.y)
-			tema_button.place(x=tema_button_konum.x,y=tema_button_konum.y)
-			title.pack(pady=20)
-			sayfa_numarasi.place(x=sayfa_numarasi_konum.x,y=sayfa_numarasi_konum.y)
+			if bildirim_2_konum == False:
+				not_paneli.place(relx=1.0, rely=0.5, anchor='e')
+				info_button.place(x=info_button_konum.x,y=info_button_konum.y)
+				yazi_paneli.place(x=yazi_paneli_konum.x,y=yazi_paneli_konum.y)
+				tema_yaziboyut_secenekleri.place(x=tema_yaziboyut_secenekleri_konum.x,y=tema_yaziboyut_secenekleri_konum.y)
+				kayit_button.place(x=kayit_button_konum.x,y=kayit_button_konum.y)
+				kisayol_button.place(x=kisayol_button_konum.x,y=kisayol_button_konum.y)
+				tema_button.place(x=tema_button_konum.x,y=tema_button_konum.y)
+				title.pack(pady=20)
+				sayfa_numarasi.place(x=sayfa_numarasi_konum.x,y=sayfa_numarasi_konum.y)
+			else:
+				not_paneli.place_forget()
+				yazi_paneli.configure(width=1198,height=650)
+				yazi_paneli.place(y=yazi_paneli_konum.y-50)
+				sayfa_numarasi.place(x=900,y=5)
+				tema_yaziboyut_secenekleri.place(x=tema_yaziboyut_secenekleri_konum.x,y=tema_yaziboyut_secenekleri_konum.y)
+				kayit_button.place(x=kayit_button_konum.x,y=kayit_button_konum.y)
+				kisayol_button.place(x=kisayol_button_konum.x,y=kisayol_button_konum.y)
+				tema_button.place(x=tema_button_konum.x,y=tema_button_konum.y)
+				title.pack(pady=20)
+				info_button.place(x=info_button_konum.x,y=info_button_konum.y)
+
 
 			print("Bilgi: Tema ekranı 0")
 
@@ -363,7 +316,7 @@ def defter_program():
 				height=50,
 				font=("italic",35),
 				command=tema1_fonk)
-		tema1_button.pack()
+		tema1_button.pack(pady=5)
 
 		def tema2_fonk():
 			tema_index_yaz("2")
@@ -380,7 +333,7 @@ def defter_program():
 				height=50,
 				font=("italic",35),
 				command=tema2_fonk)
-		tema2_button.pack()
+		tema2_button.pack(pady=5)
 
 		def tema3_fonk():
 			tema_index_yaz("3")
@@ -397,7 +350,7 @@ def defter_program():
 				height=50,
 				font=("italic",35),
 				command=tema3_fonk)
-		tema3_button.pack()
+		tema3_button.pack(pady=5)
 
 		etkin_tema = ctk.CTkLabel(window,
 				font=("italic",30),
@@ -412,6 +365,24 @@ def defter_program():
 			etkin_tema.configure(text="Etkin Tema: Açık")
 		else:
 			etkin_tema.configure(text="Tema bulunamadı :/")
+
+	def full_panel_fonk(event=None):
+		def geri(event=None):
+			not_paneli.place(relx=1.0, rely=0.5, anchor='e')
+			yazi_paneli.place(y=yazi_paneli_konum.y)
+			yazi_paneli.configure(height=570,width=860)
+			sayfa_numarasi.place(x=sayfa_numarasi_konum.x,y=sayfa_numarasi_konum.y)
+			global bildirim_2_konum
+			bildirim_2_konum =False
+			window.bind("<Control-f>",full_panel_fonk)
+
+		not_paneli.place_forget()
+		yazi_paneli.configure(width=1198,height=650)
+		yazi_paneli.place(y=yazi_paneli_konum.y-50)
+		sayfa_numarasi.place(x=900,y=5)
+		global bildirim_2_konum
+		bildirim_2_konum = True
+		window.bind("<Control-f>",geri)
 
 	def sayfa_oku():
 		file = open(f"{kullanici_dizini}/.defter/end.yigit","r")
@@ -472,6 +443,7 @@ def defter_program():
 	window.bind("<Control-s>",kayit_fonk)
 	window.bind("<Control-h>",info_fonk)
 	window.bind("<Control-t>",tema_fonk)
+	window.bind("<Control-f>",full_panel_fonk)
 
 	class konum:
 		def __init__(self,x=1,y=1):
