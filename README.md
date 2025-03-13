@@ -10,7 +10,7 @@
 ![Linux](https://img.shields.io/badge/Linux-1e1e1e?logo=linux&logoColor=white&style=for-the-badge)
 [![Codacity](https://img.shields.io/codacy/grade/bb3500c728344ef898cb6c66bc356f00?logo=codacy&logoColor=white&style=for-the-badge)](https://app.codacy.com/gh/YigitC7/Defter)
 
-  <a href="https://github.com/SabanGnc">
+  <a>
     <img src="https://github.com/SabanGnc/SabanGnc/assets/139702707/cc75e47a-eda0-498f-bc38-1a9a3e6ea37c" alt="Github Stats" width="1200">
   </a>
   
