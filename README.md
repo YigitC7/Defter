@@ -1,13 +1,12 @@
-
-
 <div align="center">
-	
+    
 # Defter
 <img src="install/defter.png" alt="logo" width="128"/>
 
-![Pyton GUI APP](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=for-the-badge)
-![QT5 APP](https://img.shields.io/badge/QT-41CD52?logo=qt&logoColor=white&style=for-the-badge)
+![Python GUI APP](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=for-the-badge)
+![Windows](https://custom-icon-badges.demolab.com/badge/Windows-0078D6?logo=windows11&logoColor=white&style=for-the-badge)
 ![Linux](https://img.shields.io/badge/Linux-1e1e1e?logo=linux&logoColor=white&style=for-the-badge)
+![QT5 APP](https://img.shields.io/badge/QT-41CD52?logo=qt&logoColor=white&style=for-the-badge)
 [![Codacity](https://img.shields.io/codacy/grade/bb3500c728344ef898cb6c66bc356f00?logo=codacy&logoColor=white&style=for-the-badge)](https://app.codacy.com/gh/YigitC7/Defter)
 
   <a>
@@ -17,12 +16,18 @@
 </div>
 
 
-![resim](img.png)
+![image](img.png)
 
-Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sadece Linux işletim sistemi için hazırlanmıştır, ama yine de Windows için derlenmiş bir exe versiyonu bulunmaktadır 
-<a href="https://github.com/YigitC7/Defter/releases/download/4.0/Defter.exe" title="indir">Windows versiyonu.</a> Yazdığınız notlar Benim geliştirdiğim şifreli bir veri tabaınında tutulur. Bu veri tabanı kullanıcı klasöründe .defter içinde bulunur.
+This is a notebook application. It allows you to take notes in pages and is designed specifically for the Linux operating system. However, there is also a compiled exe version for Windows 
+<a href="https://github.com/YigitC7/Defter/releases/download/4.0/Defter.exe" title="download">Windows version.</a> The notes you write are stored in an encrypted database developed by me. This database is located in the `.defter` folder in the user's directory.
 
-## Kurulum
+Read this in other languages: [🇹🇷](README-tr.md)
+
+## Installation
+
+```bash 
+git clone https://github.com/YigitC7/Defter
+
 ```bash	
 git clone https://github.com/YigitC7/Defter
 ```
@@ -32,20 +37,20 @@ cd Defter
 ```bash
 sudo sh install.sh
 ```
-<p>Kaldırmak için</p>
+<details>
+<summary>For Remove;</summary>
+<code>sudo sh remove.sh</code>
+</details>
 
-```bash
-sudo sh remove.sh
-```
-## Tam komut
+## Full Command
 ```bash	
 git clone https://github.com/YigitC7/Defter && cd Defter && sudo sh install.sh
 ```
->Detaylı kurulum ve daha fazla ayrıntı için <a href="https://defter.netlify.app/">Web sitesini</a> ziyaret edin.
+> For detailed installation instructions and more information, visit the <a href="https://defter.netlify.app/">website</a>.
 
 <br>
 
-### Yeni bir kütüphane olan Customtkinter kullanır
+### Uses the new Customtkinter library
   
 ```python
   import customtkinter as ctk
@@ -62,7 +67,7 @@ git clone https://github.com/YigitC7/Defter && cd Defter && sudo sh install.sh
 ```
 <br>
 
-### Bütün renk kodları düzenli şekilde yazılmıştır
+### All color codes are written systematically
 
 ```python
 	class colors:
@@ -125,7 +130,7 @@ git clone https://github.com/YigitC7/Defter && cd Defter && sudo sh install.sh
 
 <br>
 
-### Pencere nesneleri x ve y konumları düzenli olarak sınıflandırılmıştır
+### The x and y positions of window objects are systematically classified
 
 ```python
 	class konum:
@@ -144,7 +149,7 @@ git clone https://github.com/YigitC7/Defter && cd Defter && sudo sh install.sh
 ```
 <br>
 
-### Notların tutulduğu dizin içeriği
+### Directory structure for storing notes
 
 ```
 ├──.defter\
@@ -168,9 +173,10 @@ git clone https://github.com/YigitC7/Defter && cd Defter && sudo sh install.sh
 ```
 ```
 
-	end.yigit ──> En son kullanılan sayfa numarası yazar
-	tema_index.yigit ──> En son kullanılan tema numarası yazar
-	texsize.yigit ──> En son ayarlanan yazı boyutu yazar
-	sayfa1.yigit ──> Sayfa içeriği şifreli bir şekilde yazar
+    end.yigit ──> Writes the last used page number
+    theme_index.yigit ──> Writes the last used theme number
+    textsize.yigit ──> Writes the last set text size
+    page1.yigit ──> Writes page content in an encrypted format
+
 
 ```
