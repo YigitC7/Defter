@@ -1,10 +1,12 @@
 import customtkinter as ctk
 from os import getenv, mkdir, getlogin, path
+import time
+import threading
 
 kullanici_dizini = path.expanduser("~")
 kullanici_adi = getlogin()
 
-hakkinda_text = """ |Sürüm\t\t\t: 5.0
+hakkinda_text = """ |Sürüm\t\t\t: 6.0
  |Karakter türü\t\t: UTF-8
  |Yazan\t\t\t: Yiğit Çıtak
  |Dil\t\t\t: Python
@@ -20,7 +22,7 @@ hakkinda_text = """ |Sürüm\t\t\t: 5.0
  |kullanıcı klasöründe .defter içinde bulunur.
  |"""
 
-kisayol_text = """ |CTRL + F : Yazı Alanını Genişlet
+kisayol_text = """ |CTRL + F : Genişlet
  |CTRL + C : Kopyala
  |CTRL + V : Yapıştır
  |CTRL + X : Kes
@@ -30,74 +32,88 @@ kisayol_text = """ |CTRL + F : Yazı Alanını Genişlet
 baslangic_ve_bittis_cizgisi = "===========[Defter"
 
 def Sifrele(sifrelenecek_girdi):
-	sifreleniyor1 = sifrelenecek_girdi.replace("q","y0y")
-	sifreleniyor2 = sifreleniyor1.replace("w","y00y")
-	sifreleniyor3 = sifreleniyor2.replace("e","y000y")
-	sifreleniyor4 = sifreleniyor3.replace("r","y0000y")
-	sifreleniyor5 = sifreleniyor4.replace("t","y00000y")
-	sifreleniyor6 = sifreleniyor5.replace("y","y000000y")
-	sifreleniyor7 = sifreleniyor6.replace("u","y0000000y")
-	sifreleniyor8 = sifreleniyor7.replace("ı","y00000000y")
-	sifreleniyor9 = sifreleniyor8.replace("o","y000000000y")
-	sifreleniyor10 = sifreleniyor9.replace("p","y0000000000y")
-	sifreleniyor11 = sifreleniyor10.replace("ğ","y00000000000y")
-	sifreleniyor12 = sifreleniyor11.replace("ü","y000000000000y")
-	sifreleniyor13 = sifreleniyor12.replace("a","y0000000000000y")
-	sifreleniyor14 = sifreleniyor13.replace("s","y00000000000000y")
-	sifreleniyor15 = sifreleniyor14.replace("d","y000000000000000y")
-	sifreleniyor16 = sifreleniyor15.replace("f","y0000000000000000y")
-	sifreleniyor17 = sifreleniyor16.replace("g","y00000000000000000y")
-	sifreleniyor18 = sifreleniyor17.replace("h","y000000000000000000y")
-	sifreleniyor19 = sifreleniyor18.replace("j","y0000000000000000000y")
-	sifreleniyor20 = sifreleniyor19.replace("k","y00000000000000000000y")
-	sifreleniyor21 = sifreleniyor20.replace("l","y000000000000000000000y")
-	sifreleniyor22 = sifreleniyor21.replace("ş","y0000000000000000000000y")
-	sifreleniyor23 = sifreleniyor22.replace("i","y00000000000000000000000y")
-	sifreleniyor24 = sifreleniyor23.replace("z","y000000000000000000000000y")
-	sifreleniyor25 = sifreleniyor24.replace("x","y0000000000000000000000000y")
-	sifreleniyor26 = sifreleniyor25.replace("c","y00000000000000000000000000y")
-	sifreleniyor27 = sifreleniyor26.replace("v","y000000000000000000000000000y")
-	sifreleniyor28 = sifreleniyor27.replace("b","y0000000000000000000000000000y")
-	sifreleniyor29 = sifreleniyor28.replace("n","y00000000000000000000000000000y")
-	sifreleniyor30 = sifreleniyor29.replace("m","y000000000000000000000000000000y")
-	sifreleniyor31 = sifreleniyor30.replace("ö","y0000000000000000000000000000000y")
-	sifrelendi = sifreleniyor31.replace("ç","y00000000000000000000000000000000y")
-	return sifrelendi
+	karakterler = {
+		'q': 'y0y',
+		'w': 'y00y',
+		'e': 'y000y',
+		'r': 'y0000y',
+		't': 'y00000y',
+		'y': 'y000000y',
+		'u': 'y0000000y',
+		'ı': 'y00000000y',
+		'o': 'y000000000y',
+		'p': 'y0000000000y',
+		'ğ': 'y00000000000y',
+		'ü': 'y000000000000y',
+		'a': 'y0000000000000y',
+		's': 'y00000000000000y',
+		'd': 'y000000000000000y',
+		'f': 'y0000000000000000y',
+		'g': 'y00000000000000000y',
+		'h': 'y000000000000000000y',
+		'j': 'y0000000000000000000y',
+		'k': 'y00000000000000000000y',
+		'l': 'y000000000000000000000y',
+		'ş': 'y0000000000000000000000y',
+		'i': 'y00000000000000000000000y',
+		'z': 'y000000000000000000000000y',
+		'x': 'y0000000000000000000000000y',
+		'c': 'y00000000000000000000000000y',
+		'v': 'y000000000000000000000000000y',
+		'b': 'y0000000000000000000000000000y',
+		'n': 'y00000000000000000000000000000y',
+		'm': 'y000000000000000000000000000000y',
+		'ö': 'y0000000000000000000000000000000y',
+		'ç': 'y00000000000000000000000000000000y'
+		}
+    
+	sifrelenmis_metin = sifrelenecek_girdi
+	for orjinal, sifreli in karakterler.items():
+		sifrelenmis_metin = sifrelenmis_metin.replace(orjinal, sifreli)
+    
+	return sifrelenmis_metin
 
 def coz(cozulecek_girdi):
-	cozuluyor1 = cozulecek_girdi.replace("y000000y0y000000y","q")
-	cozuluyor2 = cozuluyor1.replace("y000000y00y000000y","w")
-	cozuluyor3 = cozuluyor2.replace("y000000y000y000000y","e")
-	cozuluyor4 = cozuluyor3.replace("y000000y0000y000000y","r")
-	cozuluyor5 = cozuluyor4.replace("y000000y00000y000000y","t")
-	cozuluyor6 = cozuluyor5.replace("y000000y","y")
-	cozuluyor7 = cozuluyor6.replace("y0000000y","u")
-	cozuluyor8 = cozuluyor7.replace("y00000000y","ı")
-	cozuluyor9 = cozuluyor8.replace("y000000000y","o")
-	cozuluyor10 = cozuluyor9.replace("y0000000000y","p")
-	cozuluyor11 = cozuluyor10.replace("y00000000000y","ğ")
-	cozuluyor12 = cozuluyor11.replace("y000000000000y","ü")
-	cozuluyor13 = cozuluyor12.replace("y0000000000000y","a")
-	cozuluyor14 = cozuluyor13.replace("y00000000000000y","s")
-	cozuluyor15 = cozuluyor14.replace("y000000000000000y","d")
-	cozuluyor16 = cozuluyor15.replace("y0000000000000000y","f")
-	cozuluyor17 = cozuluyor16.replace("y00000000000000000y","g")
-	cozuluyor18 = cozuluyor17.replace("y000000000000000000y","h")
-	cozuluyor19 = cozuluyor18.replace("y0000000000000000000y","j")
-	cozuluyor20 = cozuluyor19.replace("y00000000000000000000y","k")
-	cozuluyor21 = cozuluyor20.replace("y000000000000000000000y","l")
-	cozuluyor22 = cozuluyor21.replace("y0000000000000000000000y","ş")
-	cozuluyor23 = cozuluyor22.replace("y00000000000000000000000y","i")
-	cozuluyor24 = cozuluyor23.replace("y000000000000000000000000y","z")
-	cozuluyor25 = cozuluyor24.replace("y0000000000000000000000000y","x")
-	cozuluyor26 = cozuluyor25.replace("y00000000000000000000000000y","c")
-	cozuluyor27 = cozuluyor26.replace("y000000000000000000000000000y","v")
-	cozuluyor28 = cozuluyor27.replace("y0000000000000000000000000000y","b")
-	cozuluyor29 = cozuluyor28.replace("y00000000000000000000000000000y","n")
-	cozuluyor30 = cozuluyor29.replace("y000000000000000000000000000000y","m")
-	cozuluyor31 = cozuluyor30.replace("y0000000000000000000000000000000y","ö")
-	cozuldu = cozuluyor31.replace("y00000000000000000000000000000000y","ç")
-	return cozuldu
+	karakterler = {
+		'y000000y0y000000y': 'q',
+		'y000000y00y000000y': 'w',
+		'y000000y000y000000y': 'e',
+		'y000000y0000y000000y': 'r',
+		'y000000y00000y000000y': 't',
+		'y000000y': 'y',
+		'y0000000y': 'u',
+		'y00000000y': 'ı',
+		'y000000000y': 'o',
+		'y0000000000y': 'p',
+		'y00000000000y': 'ğ',
+		'y000000000000y': 'ü',
+		'y0000000000000y': 'a',
+		'y00000000000000y': 's',
+		'y000000000000000y': 'd',
+		'y0000000000000000y': 'f',
+		'y00000000000000000y': 'g',
+		'y000000000000000000y': 'h',
+		'y0000000000000000000y': 'j',
+		'y00000000000000000000y': 'k',
+		'y000000000000000000000y': 'l',
+		'y0000000000000000000000y': 'ş',
+		'y00000000000000000000000y': 'i',
+		'y000000000000000000000000y': 'z',
+		'y0000000000000000000000000y': 'x',
+		'y00000000000000000000000000y': 'c',
+		'y000000000000000000000000000y': 'v',
+		'y0000000000000000000000000000y': 'b',
+		'y00000000000000000000000000000y': 'n',
+		'y000000000000000000000000000000y': 'm',
+		'y0000000000000000000000000000000y': 'ö',
+		'y00000000000000000000000000000000y': 'ç'
+		}
+    
+	cozulmus_metin = cozulecek_girdi
+	for sifreli, orjinal in karakterler.items():
+		cozulmus_metin = cozulmus_metin.replace(sifreli, orjinal)
+    
+	return cozulmus_metin
 
 def text_size_yaz(size=""):
 	file = open(f"{kullanici_dizini}/.defter/textsize.yigit","w")
@@ -244,6 +260,49 @@ def defter_program():
 
 		hakkinda.mainloop()
 
+	def create_window_with_loading(root, loading_duration=3):
+		loading_window = ctk.CTkToplevel(root)
+		loading_window.geometry(f"400x200+{loading_window.winfo_screenwidth()//2 - 400}+{loading_window.winfo_screenheight()//2 - 300}")
+		loading_window.resizable(False, False)
+		loading_window.transient(root)
+		loading_window.grab_set()
+		loading_window.overrideredirect(True)
+
+		label = ctk.CTkLabel(loading_window, text="Defter Yükleniyor...", font=("Arial", 20))
+		label.pack(pady=20)
+
+		progress_var = ctk.DoubleVar(value=0.0)
+		progressbar = ctk.CTkProgressBar(loading_window, variable=progress_var)
+		progressbar.pack(pady=10, padx=20, fill="x")
+    
+		percent_label = ctk.CTkLabel(loading_window, text="%0", font=("Arial", 12))
+		percent_label.pack()
+
+
+		if tema_index_oku() == "1":
+			loading_window.configure(fg_color=tema_index1.window)
+			label.configure(text_color=tema_index1.title_text)
+			percent_label.configure(text_color=tema_index1.title_text)
+		elif tema_index_oku() == "2":
+			loading_window.configure(fg_color=tema_index2.window)
+			label.configure(text_color=tema_index2.title_text)
+			percent_label.configure(text_color=tema_index2.title_text)
+		elif tema_index_oku() == "3":
+			loading_window.configure(fg_color=tema_index3.window)
+			label.configure(text_color=tema_index3.title_text)
+			percent_label.configure(text_color=tema_index3.title_text)
+
+		def update_progress(current_progress=0):
+			if current_progress < 100:
+				current_progress += 25
+				progress_var.set(current_progress / 100)
+				percent_label.configure(text=f"%{current_progress}")
+				root.after(int(loading_duration * 10), update_progress, current_progress)
+			else:
+				loading_window.destroy()
+
+		update_progress()
+
 	def tema_fonk(event=None):
 		def geri(event = None):
 			window.bind("<Control-t>",tema_fonk)
@@ -272,7 +331,6 @@ def defter_program():
 				tema_button.place(x=tema_button_konum.x,y=tema_button_konum.y)
 				title.pack(pady=20)
 				info_button.place(x=info_button_konum.x,y=info_button_konum.y)
-
 
 			print("Bilgi: Tema ekranı 0")
 
@@ -443,6 +501,8 @@ def defter_program():
 	window.configure(fg_color=main_tema.window)
 	window.resizable(False, False)
 
+	create_window_with_loading(window)
+
 	window.bind("<Control-s>",kayit_fonk)
 	window.bind("<Control-h>",info_fonk)
 	window.bind("<Control-t>",tema_fonk)
@@ -596,7 +656,10 @@ def defter_program():
 		sayfa_numarasi.configure(text=f"Sayfa {sayfa_oku()}")
 
 	sayfa_geri_dondur()
+	
 	window.mainloop()
+
+
 
 if __name__ == "__main__":
 	print(baslangic_ve_bittis_cizgisi)
