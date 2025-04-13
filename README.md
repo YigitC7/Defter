@@ -46,8 +46,6 @@ sudo cp -r install/Defter.desktop /usr/share/applications/
 sudo sh remove.sh
 ```
 
->Detaylı kurulum ve daha fazla ayrıntı için <a href="https://defter.netlify.app/">Web sitesini</a> ziyaret edin.
-
 <br>
 
 ### Notların tutulduğu dizin içeriği
@@ -80,3 +78,6 @@ texsize.yigit ──> En son ayarlanan yazı boyutu yazar
 sayfa1.yigit ──> Sayfa içeriği şifreli bir şekilde yazar
 
 ```
+<br>
+
+>Daha fazla ayrıntı için <a href="https://defter.netlify.app/">Web sitesini</a> ziyaret edin.
