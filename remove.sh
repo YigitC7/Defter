@@ -3,7 +3,7 @@ if [[ "${UID}" != 0 ]] ; then
 	exit 1
 fi
 sudo rm -rf /usr/local/bin/defter
-sudo rm -rf /usr/share/pixmaps/icon.png
+sudo rm -rf /usr/share/pixmaps/defter.png
 sudo rm -rf /usr/share/applications/Defter.desktop
 clear
 echo -e "\e[1;34mDefter Programı Kaldırılmıştır\033[0m"
