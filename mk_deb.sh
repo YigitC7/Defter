@@ -8,7 +8,7 @@ PACKAGE_DIR="$PACKAGE_NAME-$PACKAGE_VERSION"
 # Paket dizinlerini oluştur
 mkdir -p "$PACKAGE_DIR/DEBIAN"
 mkdir -p "$PACKAGE_DIR/usr/bin"
-mkdir -p "$PACKAGE_DIR/usr/share/icons/hicolor/128x128/apps"
+mkdir -p "$PACKAGE_DIR/usr/share/icons/hicolor/512x512/apps"  # 512x512 boyutu için
 mkdir -p "$PACKAGE_DIR/usr/share/applications"
 
 # Kontrol dosyasını oluştur
@@ -38,10 +38,15 @@ EOF
 # Dosyaları yerleştirme
 cp -r dist/Defter "$PACKAGE_DIR/usr/bin/Defter"
 chmod +x "$PACKAGE_DIR/usr/bin/Defter"  # Çalıştırma izni ver
-cp -f img/icon.png "$PACKAGE_DIR/usr/share/icons/hicolor/128x128/apps/$PACKAGE_NAME.png"
+cp -f img/icon.png "$PACKAGE_DIR/usr/share/icons/hicolor/512x512/apps/$PACKAGE_NAME.png"
+
+# Ek ikon boyutları için gerekirse symbolic link oluşturabilirsiniz
+# Örneğin 128x128 için:
+mkdir -p "$PACKAGE_DIR/usr/share/icons/hicolor/128x128/apps"
+ln -s "../../512x512/apps/$PACKAGE_NAME.png" "$PACKAGE_DIR/usr/share/icons/hicolor/128x128/apps/$PACKAGE_NAME.png"
 
 # Deb paketi oluştur
 dpkg-deb --build "$PACKAGE_DIR"
 
 echo "Dizin yapısı oluşturuldu: $PACKAGE_DIR"
-echo "Defter deb paketi oluşturuldu"
+echo "Defter deb paketi oluşturuldu: ${PACKAGE_DIR}.deb"
