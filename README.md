@@ -3,7 +3,7 @@
 <div align="center">
 	
 # Defter
-<img src="install/defter.png" alt="logo" width="128"/>
+<img src="img/defter.png" alt="logo" width="128"/>
 
 ![Pyton GUI APP](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=for-the-badge)
 ![QT5 APP](https://img.shields.io/badge/QT-41CD52?logo=qt&logoColor=white&style=for-the-badge)
