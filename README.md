@@ -6,7 +6,7 @@
 <img src="img/icon.png" alt="logo" width="128"/>
 
 ![Pyton GUI APP](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=for-the-badge)
-![QT5 APP](https://img.shields.io/badge/QT-41CD52?logo=qt&logoColor=white&style=for-the-badge)
+![CustomTkinter](https://img.shields.io/badge/CustomTkinter-1a1a1a?style=for-the-badge&logo=python&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-1e1e1e?logo=linux&logoColor=white&style=for-the-badge)
 [![Codacity](https://img.shields.io/codacy/grade/bb3500c728344ef898cb6c66bc356f00?logo=codacy&logoColor=white&style=for-the-badge)](https://app.codacy.com/gh/YigitC7/Defter)
 
