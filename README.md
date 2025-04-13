@@ -37,7 +37,7 @@ pip install customtkinter pyinstaller
 pyinstaller --noconsole --onefile src/Defter.py
 sudo mkdir /usr/local/bin/defter
 sudo cp -r dist/Defter /usr/local/bin/defter/Defter
-sudo cp -r img/icon.png /usr/share/pixmaps/defter.py
+sudo cp -r img/icon.png /usr/share/pixmaps/defter.png
 sudo cp -r install/Defter.desktop /usr/share/applications/
 ```
 <p>Kaldırmak için</p>
