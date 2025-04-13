@@ -22,24 +22,30 @@
 Bu bir not defteri programıdır. Sayfalar halinde not tutmanızı sağlar ve sadece Linux işletim sistemi için hazırlanmıştır. Yazdığınız notlar Benim geliştirdiğim şifreli bir veri tabaınında tutulur. Bu veri tabanı kullanıcı klasöründe .defter içinde bulunur.
 
 ## Kurulum
+
+### İndrme
+<a href="https://github.com/YigitC7/Defter/releases/download/6.0/Defter-6.0.deb">DEB pack indir</a>
+
+### Manuel kurulum
 ```bash	
 git clone https://github.com/YigitC7/Defter
-```
-```bash
 cd Defter
-```
-```bash
-sudo sh install.sh
+python3 -m venv myev
+source myev/bin/activate
+pip install --upgrade pip
+pip install customtkinter pyinstaller
+pyinstaller --noconsole --onefile Defter.py
+sudo mkdir /usr/local/bin/defter
+sudo cp -r dist/Defter /usr/local/bin/defter/Defter
+sudo cp -r img/icon.png.png /usr/share/pixmaps/
+sudo cp -r install/Defter.desktop /usr/share/applications/
 ```
 <p>Kaldırmak için</p>
 
 ```bash
 sudo sh remove.sh
 ```
-## Tam komut
-```bash	
-git clone https://github.com/YigitC7/Defter && cd Defter && sudo sh install.sh
-```
+
 >Detaylı kurulum ve daha fazla ayrıntı için <a href="https://defter.netlify.app/">Web sitesini</a> ziyaret edin.
 
 <br>
